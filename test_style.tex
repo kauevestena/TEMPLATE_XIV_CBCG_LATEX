@@ -1,0 +1,48 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{mathptmx} % Times New Roman
+\usepackage[margin=2cm]{geometry}
+\usepackage{titlesec}
+\usepackage{indentfirst}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{longtable}
+\usepackage{booktabs}
+
+% Formatting Table 1 Rules:
+% Title: 16pt, bold, centered
+\title{\vspace{-2em}\fontsize{16pt}{19.2pt}\selectfont\textbf{Full paper Template: Author Guidelines}\vspace{12pt}}
+\author{\fontsize{12pt}{14.4pt}\selectfont First Author¹, Second Author ², Third Author ²*\vspace{12pt}\\\fontsize{12pt}{14.4pt}\selectfont ¹ Department/Unit (if applicable), Organization, City, Brazil, author1@email.com.br*\\² Department/Unit (if applicable), Organization, City, Brazil, \{author2, author3\}@email.com.br *}
+\date{}
+
+% Headings: Times New Roman, 14pt, bold, left-justified, first letter in capitals, one blank line above.
+\titleformat{\section}
+  {\fontsize{14pt}{16.8pt}\selectfont\bfseries}{\thesection}{1em}{}
+\titlespacing*{\section}
+  {0pt}{14pt}{0pt}
+
+% Sub-headings: Times New Roman, 12pt, bold, left-justified, in proper case, one blank line above.
+\titleformat{\subsection}
+  {\fontsize{12pt}{14.4pt}\selectfont\bfseries}{\thesubsection}{1em}{}
+\titlespacing*{\subsection}
+  {0pt}{12pt}{0pt}
+
+% Sub-sub-headings: Times New Roman, 12pt, italic, left-justified, in proper case, one blank line above.
+\titleformat{\subsubsection}
+  {\fontsize{12pt}{14.4pt}\selectfont\itshape}{\thesubsubsection}{1em}{}
+\titlespacing*{\subsubsection}
+  {0pt}{12pt}{0pt}
+
+% Paragraphs: 12pt, line spacing 18pt (1.5 approx), 0.5cm indent, 6pt before
+\setlength{\parindent}{0.5cm}
+\setlength{\parskip}{6pt}
+\setstretch{1.25} % equivalent to at least 18pt line spacing for 12pt font
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+Test
+\end{document}
