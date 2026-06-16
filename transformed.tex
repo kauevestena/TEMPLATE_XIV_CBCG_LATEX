@@ -1,7 +1,7 @@
 \documentclass[12pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{mathptmx} % Times New Roman
-\usepackage[margin=2cm]{geometry}
+\usepackage[left=2.1cm,right=2.1cm,top=2.1cm,bottom=2.1cm,headheight=155pt]{geometry}
 \usepackage{titlesec}
 \usepackage{indentfirst}
 \usepackage{setspace}
@@ -12,9 +12,15 @@
 \usepackage{url}
 \usepackage[hidelinks]{hyperref}
 \usepackage{calc}
+\usepackage{amsmath}
+\usepackage{eso-pic}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
 \usepackage{array}
 \usepackage{soul}
-\usepackage{amsmath}
+
+\renewcommand{\thesection}{\Roman{section}.}
+\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
 
 \titleformat{\section}{\fontsize{14pt}{16.8pt}\selectfont\bfseries}{\thesection}{1em}{}
 \titlespacing*{\section}{0pt}{14pt}{0pt}
@@ -29,12 +35,8 @@
 \setlength{\parskip}{6pt}
 \setstretch{1.25} % Line spacing of at least 18pt
 
-\pagestyle{plain} % Page numbers starting at 1, no headers
+\pagestyle{plain}
 
-\renewcommand{\thesection}{\Roman{section}.}
-\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
-
-\usepackage{eso-pic}
 \AddToShipoutPictureBG*{%
   \AtPageLowerLeft{%
     \includegraphics[width=\paperwidth,height=\paperheight]{header_bg.jpg}%
@@ -47,23 +49,31 @@
 \begin{document}
 
 
-\textbf{Full paper Template: Author Guidelines}
 
-First Author\textsuperscript{1}, Second Author \textsuperscript{2},
-Third Author \textsuperscript{2}*
 
-\begin{quote}
-\textsuperscript{1} Department/Unit (if applicable), Organization, City,
-Brazil, author1@email.com.br*
 
-\textsuperscript{2} Department/Unit (if applicable), Organization, City,
-Brazil, \{author2, author3\}@email.com.br *
+\begin{center}
+\vspace*{3.5em}\fontsize{16pt}{19.2pt}\selectfont\begin{center}
+\vspace*{3.5em}\fontsize{16pt}{19.2pt}\selectfont\begin{center}
+\vspace*{3.5em}\fontsize{16pt}{19.2pt}\selectfont\textbf{Full paper Template: Author Guidelines}\vspace{12pt}
+\end{center}\vspace{12pt}
+\end{center}\vspace{12pt}
+\end{center}
 
-*Those information should be filled only after the work has been
-approved
-\end{quote}
+\begin{center}
+\fontsize{12pt}{14.4pt}\selectfont {\color{red}First Author\textsuperscript{1}, Second Author \textsuperscript{2}, Third Author \textsuperscript{2}*}\vspace{12pt}
+\end{center}
 
-\textbf{Abstract}
+\begin{center}
+\fontsize{12pt}{14.4pt}\selectfont \color{red}
+\textsuperscript{1} Department/Unit (if applicable), Organization, City, Brazil, author1@email.com.br*
+
+\textsuperscript{2} Department/Unit (if applicable), Organization, City, Brazil, \{author2, author3\}@email.com.br *
+
+*Those information should be filled only after the work has been approved
+\end{center}
+
+\noindent\noindent\noindent\textbf{Abstract}
 
 \emph{The abstract must be limited to 200-400 words. Use Times New
 Roman, 12pt, italics, with line spacing of 1,5. Indent the first line of
@@ -74,7 +84,7 @@ contribution and key findings of the work. Abstracts that do not clearly
 state the main contribution and results of the paper may not be
 considered for review. Separate sections with a single line.}
 
-\textbf{Keywords:} Include 3 to 5 keywords, separated by ``;''; using
+\noindent\noindent\noindent\textbf{Keywords:} Include 3 to 5 keywords, separated by ``;''; using
 lower case (except names), and Times New Roman 12. At least one of them
 must be selected from the following core areas: Cadastre, Cartography,
 Geodesy, Photogrammetry or Remote Sensing.
@@ -403,7 +413,13 @@ Source: Author and year (if necessary)
 
 
 \renewcommand\refname{\vspace{-2em}} % Remove auto-generated 'References' heading if using article
+
+\renewcommand\refname{\vspace{-2em}} % Remove auto-generated 'References' heading if using article
 \subsubsection*{References}
+\nocite{*}
 \bibliographystyle{plain}
 \bibliography{references}
+
+
+
 \end{document}
