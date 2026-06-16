@@ -1,7 +1,7 @@
 \documentclass[12pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{mathptmx} % Times New Roman
-\usepackage[left=2.1cm,right=2.1cm,top=2.1cm,bottom=2.1cm,headheight=155pt]{geometry}
+\usepackage[margin=2cm]{geometry}
 \usepackage{titlesec}
 \usepackage{indentfirst}
 \usepackage{setspace}
@@ -12,15 +12,9 @@
 \usepackage{url}
 \usepackage[hidelinks]{hyperref}
 \usepackage{calc}
-\usepackage{amsmath}
-\usepackage{eso-pic}
-\usepackage{fancyhdr}
-\usepackage{xcolor}
 \usepackage{array}
 \usepackage{soul}
-
-\renewcommand{\thesection}{\Roman{section}.}
-\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
+\usepackage{amsmath}
 
 \titleformat{\section}{\fontsize{14pt}{16.8pt}\selectfont\bfseries}{\thesection}{1em}{}
 \titlespacing*{\section}{0pt}{14pt}{0pt}
@@ -35,8 +29,12 @@
 \setlength{\parskip}{6pt}
 \setstretch{1.25} % Line spacing of at least 18pt
 
-\pagestyle{plain}
+\pagestyle{plain} % Page numbers starting at 1, no headers
 
+\renewcommand{\thesection}{\Roman{section}.}
+\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
+
+\usepackage{eso-pic}
 \AddToShipoutPictureBG*{%
   \AtPageLowerLeft{%
     \includegraphics[width=\paperwidth,height=\paperheight]{header_bg.jpg}%
@@ -49,31 +47,23 @@
 \begin{document}
 
 
+\textbf{Full paper Template: Author Guidelines}
 
+First Author\textsuperscript{1}, Second Author \textsuperscript{2},
+Third Author \textsuperscript{2}*
 
+\begin{quote}
+\textsuperscript{1} Department/Unit (if applicable), Organization, City,
+Brazil, author1@email.com.br*
 
-\begin{center}
-\vspace*{3.5em}\fontsize{16pt}{19.2pt}\selectfont\begin{center}
-\vspace*{3.5em}\fontsize{16pt}{19.2pt}\selectfont\begin{center}
-\vspace*{3.5em}\fontsize{16pt}{19.2pt}\selectfont\textbf{Full paper Template: Author Guidelines}\vspace{12pt}
-\end{center}\vspace{12pt}
-\end{center}\vspace{12pt}
-\end{center}
+\textsuperscript{2} Department/Unit (if applicable), Organization, City,
+Brazil, \{author2, author3\}@email.com.br *
 
-\begin{center}
-\fontsize{12pt}{14.4pt}\selectfont {\color{red}First Author\textsuperscript{1}, Second Author \textsuperscript{2}, Third Author \textsuperscript{2}*}\vspace{12pt}
-\end{center}
+*Those information should be filled only after the work has been
+approved
+\end{quote}
 
-\begin{center}
-\fontsize{12pt}{14.4pt}\selectfont \color{red}
-\textsuperscript{1} Department/Unit (if applicable), Organization, City, Brazil, author1@email.com.br*
-
-\textsuperscript{2} Department/Unit (if applicable), Organization, City, Brazil, \{author2, author3\}@email.com.br *
-
-*Those information should be filled only after the work has been approved
-\end{center}
-
-\noindent\noindent\noindent\textbf{Abstract}
+\textbf{Abstract}
 
 \emph{The abstract must be limited to 200-400 words. Use Times New
 Roman, 12pt, italics, with line spacing of 1,5. Indent the first line of
@@ -84,7 +74,7 @@ contribution and key findings of the work. Abstracts that do not clearly
 state the main contribution and results of the paper may not be
 considered for review. Separate sections with a single line.}
 
-\noindent\noindent\noindent\textbf{Keywords:} Include 3 to 5 keywords, separated by ``;''; using
+\textbf{Keywords:} Include 3 to 5 keywords, separated by ``;''; using
 lower case (except names), and Times New Roman 12. At least one of them
 must be selected from the following core areas: Cadastre, Cartography,
 Geodesy, Photogrammetry or Remote Sensing.
@@ -208,7 +198,7 @@ Page size \& margins
 \begin{quote}
 A4 Portrait; all margins 2cm
 \end{quote}
-\end{minipage} \\ \hline
+\end{minipage} \\
 \begin{minipage}[t]{\linewidth}\raggedright
 \begin{quote}
 Page numbers
@@ -217,7 +207,7 @@ Page numbers
 \begin{quote}
 Yes, starting at 1
 \end{quote}
-\end{minipage} \\ \hline
+\end{minipage} \\
 \begin{minipage}[t]{\linewidth}\raggedright
 \begin{quote}
 Footer / Headers
@@ -226,7 +216,7 @@ Footer / Headers
 \begin{quote}
 None (NB: footnotes are \emph{not} permitted)
 \end{quote}
-\end{minipage} \\ \hline
+\end{minipage} \\
 \begin{minipage}[t]{\linewidth}\raggedright
 \begin{quote}
 Title
@@ -236,7 +226,7 @@ Title
 Times New Roman, 16pt, bold, first letter in capitals, centered,
 followed by a single blank line, 12pt.
 \end{quote}
-\end{minipage} \\ \hline
+\end{minipage} \\
 \begin{minipage}[t]{\linewidth}\raggedright
 \begin{quote}
 Author and co-authors
@@ -246,7 +236,7 @@ Author and co-authors
 Times New Roman, 12pt, centered - author and co-author names in one
 line, followed by a single blank line, 12pt.
 \end{quote}
-\end{minipage} \\ \hline
+\end{minipage} \\
 \begin{minipage}[t]{\linewidth}\raggedright
 \begin{quote}
 Author affiliations
@@ -257,7 +247,7 @@ Times New Roman, 12pt, centered -- each author's full affiliation (i.e.
 company / organization), full contact details of the corresponding
 author only, followed by a single blank line, 12pt.
 \end{quote}
-\end{minipage} \\ \hline
+\end{minipage} \\
 \begin{minipage}[t]{\linewidth}\raggedright
 \begin{quote}
 Key-words
@@ -267,7 +257,7 @@ Key-words
 Times New Roman, 12pt, left-justified, separated by semicolon, followed
 by a single blank line,12pt.
 \end{quote}
-\end{minipage} \\ \hline
+\end{minipage} \\
 \begin{minipage}[t]{\linewidth}\raggedright
 \begin{quote}
 Abstract
@@ -280,7 +270,7 @@ on the left- and right-hand side.
 
 Separate sections with a single line. 200 - 400 words
 \end{quote}
-\end{minipage} \\ \hline
+\end{minipage} \\
 \begin{minipage}[t]{\linewidth}\raggedright
 \begin{quote}
 Headings
@@ -290,7 +280,7 @@ Headings
 Times New Roman, 14pt, bold, left-justified, first letter in capitals,
 one blank line above.
 \end{quote}
-\end{minipage} \\ \hline
+\end{minipage} \\
 \begin{minipage}[t]{\linewidth}\raggedright
 \begin{quote}
 Sub-headings
@@ -300,7 +290,7 @@ Sub-headings
 Times New Roman, 12pt, bold, left-justified, in proper case, one blank
 line above.
 \end{quote}
-\end{minipage} \\ \hline
+\end{minipage} \\
 \begin{minipage}[t]{\linewidth}\raggedright
 \begin{quote}
 Sub-sub-headings
@@ -310,7 +300,7 @@ Sub-sub-headings
 Times New Roman, 12pt, italic, left-justified, in proper case, one blank
 line above.
 \end{quote}
-\end{minipage} \\ \hline
+\end{minipage} \\
 \begin{minipage}[t]{\linewidth}\raggedright
 \begin{quote}
 Heading numbering
@@ -405,7 +395,7 @@ Table 2. Differences with GPS/Levelling - Western Cape Province
 \hline
 \endhead
 \endlastfoot
-AGP2003 & - 76 & - 38 & - 63 & 9 \\ \hline
+AGP2003 & - 76 & - 38 & - 63 & 9 \\
 EGM96 & - 97 & - 62 & - 55 & 20 \\
 \end{longtable}
 
@@ -413,13 +403,8 @@ Source: Author and year (if necessary)
 
 
 \renewcommand\refname{\vspace{-2em}} % Remove auto-generated 'References' heading if using article
-
-\renewcommand\refname{\vspace{-2em}} % Remove auto-generated 'References' heading if using article
 \subsubsection*{References}
 \nocite{*}
 \bibliographystyle{plain}
 \bibliography{references}
-
-
-
 \end{document}
