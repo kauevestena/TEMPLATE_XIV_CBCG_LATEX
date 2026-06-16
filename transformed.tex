@@ -1,7 +1,7 @@
 \documentclass[12pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{mathptmx} % Times New Roman
-\usepackage[left=2.1cm,right=2.1cm,top=2.1cm,bottom=2.1cm,headheight=155pt]{geometry}
+\usepackage[margin=2cm]{geometry}
 \usepackage{titlesec}
 \usepackage{indentfirst}
 \usepackage{setspace}
@@ -12,12 +12,9 @@
 \usepackage{url}
 \usepackage[hidelinks]{hyperref}
 \usepackage{calc}
-\usepackage{amsmath}
-\usepackage{eso-pic}
-\usepackage{fancyhdr}
-\usepackage{xcolor}
 \usepackage{array}
 \usepackage{soul}
+\usepackage{amsmath}
 
 \titleformat{\section}{\fontsize{14pt}{16.8pt}\selectfont\bfseries}{\thesection}{1em}{}
 \titlespacing*{\section}{0pt}{14pt}{0pt}
@@ -32,8 +29,12 @@
 \setlength{\parskip}{6pt}
 \setstretch{1.25} % Line spacing of at least 18pt
 
-\pagestyle{plain}
+\pagestyle{plain} % Page numbers starting at 1, no headers
 
+\renewcommand{\thesection}{\Roman{section}.}
+\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
+
+\usepackage{eso-pic}
 \AddToShipoutPictureBG*{%
   \AtPageLowerLeft{%
     \includegraphics[width=\paperwidth,height=\paperheight]{header_bg.jpg}%
@@ -46,25 +47,23 @@
 \begin{document}
 
 
+\textbf{Full paper Template: Author Guidelines}
 
-\begin{center}
-\vspace*{3.5em}\fontsize{16pt}{19.2pt}\selectfont\textbf{Full paper Template: Author Guidelines}\vspace{12pt}
-\end{center}
+First Author\textsuperscript{1}, Second Author \textsuperscript{2},
+Third Author \textsuperscript{2}*
 
-\begin{center}
-\fontsize{12pt}{14.4pt}\selectfont {\color{red}First Author\textsuperscript{1}, Second Author \textsuperscript{2}, Third Author \textsuperscript{2}*}\vspace{12pt}
-\end{center}
+\begin{quote}
+\textsuperscript{1} Department/Unit (if applicable), Organization, City,
+Brazil, author1@email.com.br*
 
-\begin{center}
-\fontsize{12pt}{14.4pt}\selectfont \color{red}
-\textsuperscript{1} Department/Unit (if applicable), Organization, City, Brazil, author1@email.com.br*
+\textsuperscript{2} Department/Unit (if applicable), Organization, City,
+Brazil, \{author2, author3\}@email.com.br *
 
-\textsuperscript{2} Department/Unit (if applicable), Organization, City, Brazil, \{author2, author3\}@email.com.br *
+*Those information should be filled only after the work has been
+approved
+\end{quote}
 
-*Those information should be filled only after the work has been approved
-\end{center}
-
-\noindent\textbf{Abstract}
+\textbf{Abstract}
 
 \emph{The abstract must be limited to 200-400 words. Use Times New
 Roman, 12pt, italics, with line spacing of 1,5. Indent the first line of
@@ -75,7 +74,7 @@ contribution and key findings of the work. Abstracts that do not clearly
 state the main contribution and results of the paper may not be
 considered for review. Separate sections with a single line.}
 
-\noindent\textbf{Keywords:} Include 3 to 5 keywords, separated by ``;''; using
+\textbf{Keywords:} Include 3 to 5 keywords, separated by ``;''; using
 lower case (except names), and Times New Roman 12. At least one of them
 must be selected from the following core areas: Cadastre, Cartography,
 Geodesy, Photogrammetry or Remote Sensing.
@@ -183,15 +182,13 @@ Table 1. Formatting summary
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2370}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7630}}@{}}
-\toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{Item}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{Description}
 \end{minipage} \\
-\midrule\noalign{}
+\hline
 \endhead
-\bottomrule\noalign{}
 \endlastfoot
 \begin{minipage}[t]{\linewidth}\raggedright
 \begin{quote}
@@ -201,7 +198,7 @@ Page size \& margins
 \begin{quote}
 A4 Portrait; all margins 2cm
 \end{quote}
-\end{minipage} \\
+\end{minipage} \\ \hline
 \begin{minipage}[t]{\linewidth}\raggedright
 \begin{quote}
 Page numbers
@@ -210,7 +207,7 @@ Page numbers
 \begin{quote}
 Yes, starting at 1
 \end{quote}
-\end{minipage} \\
+\end{minipage} \\ \hline
 \begin{minipage}[t]{\linewidth}\raggedright
 \begin{quote}
 Footer / Headers
@@ -219,7 +216,7 @@ Footer / Headers
 \begin{quote}
 None (NB: footnotes are \emph{not} permitted)
 \end{quote}
-\end{minipage} \\
+\end{minipage} \\ \hline
 \begin{minipage}[t]{\linewidth}\raggedright
 \begin{quote}
 Title
@@ -229,7 +226,7 @@ Title
 Times New Roman, 16pt, bold, first letter in capitals, centered,
 followed by a single blank line, 12pt.
 \end{quote}
-\end{minipage} \\
+\end{minipage} \\ \hline
 \begin{minipage}[t]{\linewidth}\raggedright
 \begin{quote}
 Author and co-authors
@@ -239,7 +236,7 @@ Author and co-authors
 Times New Roman, 12pt, centered - author and co-author names in one
 line, followed by a single blank line, 12pt.
 \end{quote}
-\end{minipage} \\
+\end{minipage} \\ \hline
 \begin{minipage}[t]{\linewidth}\raggedright
 \begin{quote}
 Author affiliations
@@ -250,7 +247,7 @@ Times New Roman, 12pt, centered -- each author's full affiliation (i.e.
 company / organization), full contact details of the corresponding
 author only, followed by a single blank line, 12pt.
 \end{quote}
-\end{minipage} \\
+\end{minipage} \\ \hline
 \begin{minipage}[t]{\linewidth}\raggedright
 \begin{quote}
 Key-words
@@ -260,7 +257,7 @@ Key-words
 Times New Roman, 12pt, left-justified, separated by semicolon, followed
 by a single blank line,12pt.
 \end{quote}
-\end{minipage} \\
+\end{minipage} \\ \hline
 \begin{minipage}[t]{\linewidth}\raggedright
 \begin{quote}
 Abstract
@@ -273,7 +270,7 @@ on the left- and right-hand side.
 
 Separate sections with a single line. 200 - 400 words
 \end{quote}
-\end{minipage} \\
+\end{minipage} \\ \hline
 \begin{minipage}[t]{\linewidth}\raggedright
 \begin{quote}
 Headings
@@ -283,7 +280,7 @@ Headings
 Times New Roman, 14pt, bold, left-justified, first letter in capitals,
 one blank line above.
 \end{quote}
-\end{minipage} \\
+\end{minipage} \\ \hline
 \begin{minipage}[t]{\linewidth}\raggedright
 \begin{quote}
 Sub-headings
@@ -293,7 +290,7 @@ Sub-headings
 Times New Roman, 12pt, bold, left-justified, in proper case, one blank
 line above.
 \end{quote}
-\end{minipage} \\
+\end{minipage} \\ \hline
 \begin{minipage}[t]{\linewidth}\raggedright
 \begin{quote}
 Sub-sub-headings
@@ -303,7 +300,7 @@ Sub-sub-headings
 Times New Roman, 12pt, italic, left-justified, in proper case, one blank
 line above.
 \end{quote}
-\end{minipage} \\
+\end{minipage} \\ \hline
 \begin{minipage}[t]{\linewidth}\raggedright
 \begin{quote}
 Heading numbering
@@ -384,7 +381,6 @@ Table 2. Differences with GPS/Levelling - Western Cape Province
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2203}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1945}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1826}}@{}}
-\toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{Model}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -396,121 +392,18 @@ Table 2. Differences with GPS/Levelling - Western Cape Province
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{Std. Dev. (cm)}
 \end{minipage} \\
-\midrule\noalign{}
+\hline
 \endhead
-\bottomrule\noalign{}
 \endlastfoot
-AGP2003 & - 76 & - 38 & - 63 & 9 \\
+AGP2003 & - 76 & - 38 & - 63 & 9 \\ \hline
 EGM96 & - 97 & - 62 & - 55 & 20 \\
 \end{longtable}
 
 Source: Author and year (if necessary)
 
-\subsubsection{References}
 
-In-text citations must use numerical identifiers enclosed in brackets,
-such as {[}1{]}. The reference list at the end of the document must be
-organized in alphabetical order by the first author\textquotesingle s
-last name and numbered accordingly, ensuring a direct correlation
-between the in-text citations and the final list. \textbf{Please note
-that in-text citation numbers correspond strictly to the
-item\textquotesingle s position in the alphabetical reference list, and
-not to their order of appearance in the text.} For references, use Times
-New Roman, 11pt, first line hanging by 0.5cm. Use a line spacing of at
-least 15pt. Use the ABNT style for reference. References should be
-listed in alphabetical order and presented as shown in the examples at
-the end of this document. References should follow one another, with no
-blank lines in between.
-
-\textbf{Book}
-
-Author, \emph{Book Title}, Edition, Place of Publication, Publisher,
-Year. Example:
-
-Czinkota, M. R.; Ronkainen, A. I. \emph{International marketing}. 7. ed.
-Mason, Ohio: Thomson/South-Western, 2004.
-
-\textbf{Chapter in Book}
-
-Author, `Chapter title', in Editors (eds.), \emph{Book Title}, Place of
-publication, Publisher, Year. Example:
-
-North, D. `Energy use at home'. In: Scott, S.; Peel, N. (org.).
-\emph{Energy conservation}. London: Academic Press, 1980.
-
-\textbf{Full-text journal article}
-
-Author, `Article title', \emph{Journal Title}, Volume (Issue), Pages,
-Year. Example:
-
-Rasid, Z. M.; Parish, T. S., `The effects of two types of relaxation
-training on students\textquotesingle{} levels of anxiety',
-\emph{Adolescence}, 33(129), 99--110, 1998.
-
-\textbf{Conference Proceedings}
-
-Author Year, \emph{Article title}, in Editors (eds.), \emph{Proceedings
-Title}, Place and date of conference, Place of publication, Publisher,
-Date of publication, Pages. Example:
-
-Merry, C. L. Recent variations in mean sea level. In: Sünkel, H.; Baker,
-T. (org.). \emph{Sea Surface Topography and the Geoid}. Edinburgh, July
-1989. New York: Springer-Verlag, 1990. p. 149-157.
-
-\textbf{Journal article on the WWW}
-
-Author Year, \emph{Article title}, \emph{Journal Title}, Volume (Issue),
-Available at: URL, Accessed Day Month Year. Example:
-
-Griffith, A. I. Coordinating family and school: mothering for schooling.
-\emph{Education Policy Analysis Archives}, v. 3, n. 1, 1995. Available
-at:
-\href{http://olam.ed.asu.edu/epaa/}{\ul{http://olam.ed.asu.edu/epaa/}}.
-Accessed: 12 feb. 1997.
-
-\textbf{Web document}
-
-Author Year, \emph{Document title}, Place, Institution/Publisher,
-Available at: URL, Accessed Day Month Year. Example:
-
-Anderson, J. CASA approves Avgas Contamination Test. Canberra:
-Department of Transport and Regional Services, 2000. Available at:
-\href{http://www.dotrs.gov.au/media/anders/archive/2000/jan_00/al6_2000.htm}{\ul{http://www.dotrs.gov.au/media/anders/archive/2000/jan\_00/al6\_2000.htm}}.
-Accessed: 7 feb. 2000.
-
-\textbf{Web document (no author)}
-
-\emph{Document title,} Year, Institution/Publisher, Available at: URL,
-Accessed Day Month Year. Example:
-
-Educating \emph{America for the 21st century: developing a strategic
-plan for educational leadership.} Columbia University, 1994. Available
-at:
-\href{http://ariel.adgrp.com/~ghb/trips/940717_ICT/policy/ILT/EdPlan.html}{\ul{http://ariel.adgrp.com/\textasciitilde ghb/trips/940717\_ICT/policy/ILT/EdPlan.html}}.
-Accessed: 16 may 1995.
-
-\textbf{Web document (no publication date)}
-
-Author {[}s.d.{]}, \emph{Document title}, Place, Institution/Publisher,
-Available at: URL, Accessed Day Month Year. Example:
-
-Sherman, C. \emph{The invisible web}. UK: Free Pint Limited, {[}s.d.{]}.
-Available at:
-\href{http://www.freepint.co.uk/issues/080600.htm\#feature}{\ul{http://www.freepint.co.uk/issues/080600.htm\#feature}}.
-Accessed: 27 nov. 2000.
-
-\textbf{Web site}
-
-Organization Year, \emph{Website title}, Place, Available at: URL,
-Accessed Day Month Year. Example:
-
-THE BODY SHOP AUSTRALIA. \emph{The Body Shop Australia}. Mulgrave,
-Victoria, 2003. Available at:
-\href{http://www.thebodyshop.com.au/}{\ul{http://www.thebodyshop.com.au/}}.
-Accessed: 31 jan. 2003.
-
-\emph{\textbf{May 1, 2026}}
-
-
-
+\renewcommand\refname{\vspace{-2em}} % Remove auto-generated 'References' heading if using article
+\subsubsection*{References}
+\bibliographystyle{plain}
+\bibliography{references}
 \end{document}
