@@ -40,6 +40,19 @@
 \setlength{\parskip}{6pt}
 \setstretch{1.25} % equivalent to at least 18pt line spacing for 12pt font
 
+\renewcommand{\thesection}{\Roman{section}.}
+\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
+
+\usepackage{eso-pic}
+\AddToShipoutPictureBG*{%
+  \AtPageLowerLeft{%
+    \includegraphics[width=\paperwidth,height=\paperheight]{header_bg.jpg}%
+  }%
+  \AtPageUpperLeft{%
+    \put(0,-115){\includegraphics[width=\paperwidth]{header_fg.jpg}}%
+  }%
+}
+
 \begin{document}
 \maketitle
 
