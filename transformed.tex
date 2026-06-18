@@ -179,14 +179,15 @@ layout of the paper.
 
 Table 1. Formatting summary
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2370}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7630}}@{}}
+\begin{longtable}[]{|
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.2370}}|
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.7630}}|}
+\hline
 \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{Item}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{Description}
-\end{minipage} \\
+\end{minipage} \\ \hline
 \hline
 \endhead
 \endlastfoot
@@ -310,7 +311,7 @@ Heading numbering
 Use the decimal system of heading numbering, with no more than three
 levels.
 \end{quote}
-\end{minipage} \\
+\end{minipage} \\ \hline
 \end{longtable}
 
 Source: Author and year (if necessary)
@@ -375,12 +376,13 @@ to the example below.
 
 Table 2. Differences with GPS/Levelling - Western Cape Province
 
-\begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1993}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2033}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2203}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1945}}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1826}}@{}}
+\begin{longtable}[]{|
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1993}}|
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2033}}|
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.2203}}|
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1945}}|
+  >{\raggedright\arraybackslash}p{(\columnwidth - 8\tabcolsep) * \real{0.1826}}|}
+\hline
 \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{Model}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -391,12 +393,12 @@ Table 2. Differences with GPS/Levelling - Western Cape Province
 \textbf{Mean (cm)}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{Std. Dev. (cm)}
-\end{minipage} \\
+\end{minipage} \\ \hline
 \hline
 \endhead
 \endlastfoot
 AGP2003 & - 76 & - 38 & - 63 & 9 \\ \hline
-EGM96 & - 97 & - 62 & - 55 & 20 \\
+EGM96 & - 97 & - 62 & - 55 & 20 \\ \hline
 \end{longtable}
 
 Source: Author and year (if necessary)
