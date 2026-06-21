@@ -1,7 +1,7 @@
 \documentclass[12pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{mathptmx} % Times New Roman
-\usepackage[margin=2cm]{geometry}
+\usepackage[margin=2cm, top=40mm]{geometry}
 \usepackage{titlesec}
 \usepackage{indentfirst}
 \usepackage{setspace}
@@ -15,6 +15,8 @@
 \usepackage{array}
 \usepackage{soul}
 \usepackage{amsmath}
+\usepackage{eso-pic}
+\usepackage{transparent}
 
 \titleformat{\section}{\fontsize{14pt}{16.8pt}\selectfont\bfseries}{\thesection}{1em}{}
 \titlespacing*{\section}{0pt}{14pt}{0pt}
@@ -34,13 +36,12 @@
 \renewcommand{\thesection}{\Roman{section}.}
 \renewcommand{\thesubsection}{\thesection\arabic{subsection}}
 
-\usepackage{eso-pic}
-\AddToShipoutPictureBG*{%
-  \AtPageLowerLeft{%
-    \includegraphics[width=\paperwidth,height=\paperheight]{header_bg.jpg}%
-  }%
+\AddToShipoutPictureBG{%
   \AtPageUpperLeft{%
-    \put(0,-115){\includegraphics[width=\paperwidth]{header_fg.jpg}}%
+    \put(0,0){\makebox(0,0)[lt]{\includegraphics[width=\paperwidth]{header.png}}}%
+  }%
+  \AtPageCenter{%
+    \put(0,0){\makebox(0,0)[c]{\transparent{0.15}\includegraphics[width=0.8\paperwidth,keepaspectratio]{watermark.png}}}%
   }%
 }
 
