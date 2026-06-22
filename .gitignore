@@ -229,3 +229,6 @@ __marimo__/
 *.fls
 *.fdb_latexmk
 *.synctex.gz
+
+# Rendered PDF templates are desired to be tracked
+!*.pdf
